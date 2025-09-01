@@ -1,0 +1,14 @@
+---
+title: Tutorials
+listing:
+  contents:
+    - .
+    - "!./index.qmd"
+    - "!CONTRIBUTING.md"
+  type: default
+  sort: "title desc"
+  categories: true
+  sort-ui: false
+  filter-ui: false
+---
+

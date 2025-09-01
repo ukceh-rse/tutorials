@@ -1,3 +1,9 @@
+# Generated automatically by Quarto
+/.quarto/
+**/*.quarto_ipynb
+
 # Outputs from quarto render
+_site/
 *.html
 *_files/
+
