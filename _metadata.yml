@@ -1,5 +1,4 @@
 execute:
   freeze: true
 
-website:
-  repo-actions: [source, issue]
+repo-actions: [source, issue]
