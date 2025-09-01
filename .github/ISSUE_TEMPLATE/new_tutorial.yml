@@ -1,0 +1,138 @@
+name: New tutorial request
+description: Propose a new tutorial for the RSE tutorials repository.
+title: "Tutorial request: ${{ values.tutorial_title }}"
+labels:
+  - request
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please complete the fields below to request/suggest a new tutorial.
+
+  - type: input
+    id: tutorial_title
+    attributes:
+      label: Tutorial title
+      description: A short, descriptive title.
+      placeholder: "e.g., Introduction to Version Control with Git"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What should this tutorial cover? Include scope and why it matters.
+      placeholder: |
+        - Problem this tutorial solves
+        - Key topics and tools
+        - Expected learning outcomes (high level)
+      render: markdown
+    validations:
+      required: true
+
+  - type: textarea
+    id: learning_objectives
+    attributes:
+      label: Learning objectives
+      description: What should learners be able to do after completing the tutorial?
+      placeholder: |
+        - Use X to accomplish Y
+        - Explain Z concept
+        - Apply A to B dataset
+      render: markdown
+    validations:
+      required: true
+  
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Provide context for the request (course/project/use-case)
+      placeholder: |
+        - Who is this tutorial for?
+        - What would it help to accomplish?
+        - Links to existing code repos, notebooks, or references
+        - Any constraints or requirements
+      render: markdown
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: languages
+    attributes:
+      label: Programming language(s)
+      description: Select all that apply.
+      options:
+        - label: Python
+        - label: R
+        - label: Julia
+        - label: Bash/Shell
+        - label: C/C++
+        - label: Fortran
+        - label: SQL
+        - label: Other (specify below)
+    validations:
+      required: true
+
+  - type: input
+    id: other_languages
+    attributes:
+      label: Other programming languages
+      description: If you selected "Other," list them here.
+      placeholder: "e.g. Stata, MPI"
+
+  - type: textarea
+    id: assumed_knowledge
+    attributes:
+      label: Assumed knowledge
+      description: Prerequisites the learner should have before starting.
+      placeholder: "e.g., Basic Python syntax; command-line fundamentals; familiarity with GitHub"
+      render: markdown
+    validations:
+      required: true
+
+  - type: textarea
+    id: target_audience
+    attributes:
+      label: Target audience
+      description: Who is this for? Be as specific as possible.
+      placeholder: "e.g., PhD students in data science; R users transitioning to Python; absolute beginners"
+      render: markdown
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: preferred_format
+    attributes:
+      label: Preferred format/platform
+      description: Select all acceptable formats/platforms.
+      options:
+        - label: Quarto / RMarkdown
+        - label: Jupyter Notebook
+        - label: Non-executable Markdown
+        - label: Slide deck (Reveal.js)
+        - label: PDF
+        - label: docx
+        - label: No preference
+    validations:
+      required: true
+
+  - type: textarea
+    id: tools
+    attributes:
+      label: Suggested tools and libraries
+      description: List specific packages, frameworks, software, or environments this tutorial should use.
+      placeholder: "e.g., pandas, seaborn, scikit-learn; Quarto; Eddie cluster; SLURM; module load Anaconda"
+      render: markdown
+    validations:
+      required: true
+
+  - type: textarea
+    id: related_resources
+    attributes:
+      label: Related tutorials or resources
+      description: Link to related materials (ours or external) to avoid duplication and enable cross-linking.
+      placeholder: "- Existing tutorial A (#123)\n- External guide: https://…"
+      render: markdown
