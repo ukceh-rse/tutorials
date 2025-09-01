@@ -1,4 +1,0 @@
-execute:
-  freeze: true
-
-repo-actions: [source, issue]

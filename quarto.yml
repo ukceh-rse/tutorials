@@ -3,3 +3,6 @@ project:
   render: 
     - "*.qmd"
     - "!CONTRIBUTING.md"
+
+execute:
+  freeze: auto
