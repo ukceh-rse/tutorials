@@ -7,3 +7,6 @@ _site/
 *.html
 *_files/
 
+.ipynb_checkpoints/
+.jupyter/
+.venv/
