@@ -1,0 +1,3 @@
+# Outputs from quarto render
+*.html
+*_files/
